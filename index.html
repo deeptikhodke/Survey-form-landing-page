@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market Research Survey Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 id="title" class="text-center">Market Research Survey</h1>
+            <p id="description" class="description text-center">
+                We appreciate your feedback to help us improve our services.
+            </p>
+        </header>
+        <form id="survey-form">
+            <div class="form-group">
+                <label id="name-label" for="name">Name</label>
+                <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    class="form-control"
+                    placeholder="Enter your name"
+                    required
+                />
+            </div>
+            <div class="form-group">
+                <label id="email-label" for="email">Email</label>
+                <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    class="form-control"
+                    placeholder="Enter your email"
+                    required
+                />
+            </div>
+            <div class="form-group">
+                <label id="number-label" for="age">Age<span class="clue">(optional)</span></label>
+                <input
+                    type="number"
+                    name="age"
+                    id="age"
+                    min="10"
+                    max="99"
+                    class="form-control"
+                    placeholder="Enter your age"
+                />
+            </div>
+            <div class="form-group">
+                <p>Which option best describes your current occupation?</p>
+                <select id="dropdown" name="occupation" class="form-control" required>
+                    <option disabled selected value>Select your occupation</option>
+                    <option value="student">Student</option>
+                    <option value="employed">Employed</option>
+                    <option value="self-employed">Self-Employed</option>
+                    <option value="unemployed">Unemployed</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <p>How did you hear about us?</p>
+                <select id="referral" name="referral" class="form-control" required>
+                    <option disabled selected value>Select an option</option>
+                    <option value="social_media">Social Media</option>
+                    <option value="friends">Friends/Family</option>
+                    <option value="advertising">Advertising</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <p>Would you recommend our services to others?</p>
+                <label>
+                    <input
+                        name="recommend"
+                        value="yes"
+                        type="radio"
+                        class="input-radio"
+                        required
+                    /> Yes
+                </label>
+                <label>
+                    <input
+                        name="recommend"
+                        value="no"
+                        type="radio"
+                        class="input-radio"
+                        required
+                    /> No
+                </label>
+            </div>
+            <div class="form-group">
+                <p>How satisfied are you with our services?</p>
+                <select id="satisfaction" name="satisfaction" class="form-control" required>
+                    <option disabled selected value>Rate your satisfaction</option>
+                    <option value="very_satisfied">Very Satisfied</option>
+                    <option value="satisfied">Satisfied</option>
+                    <option value="neutral">Neutral</option>
+                    <option value="dissatisfied">Dissatisfied</option>
+                    <option value="very_dissatisfied">Very Dissatisfied</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <p>What aspects of our service do you find most valuable?</p>
+                <textarea
+                    id="value-aspects"
+                    class="input-textarea"
+                    name="valueAspects"
+                    placeholder="Please share your thoughts..."
+                    required
+                ></textarea>
+            </div>
+            <div class="form-group">
+                <p>Any additional comments or suggestions?</p>
+                <textarea
+                    id="comments"
+                    class="input-textarea"
+                    name="comments"
+                    placeholder="Enter your comments here..."
+                ></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit" id="submit" class="submit-button">
+                    Submit
+                </button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
